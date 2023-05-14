@@ -5,10 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
     <title>Weather</title>
 </head>
 <body>
-    <h1>Weather</h1>
+
+    <div class="container">
+
+        <h3 class="title">Confira o clima da cidade:</h3>
+        <div class="inputs">
+            <input type="search" class="fieldSearch">
+            <button type="submit" class="buttonSubmit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        
+        <div class="informations">
+            <h4 class="city">Cidade</h4>
+            <div class="dates">
+                <span class="weather">Nublado</span>
+                <span class="deg">15°C</span>
+                <img src="" alt="Condition image">
+            </div>
+            <p class="conditionsWeather">Previsão de clima nublado, porem poucas chances de chuva.</p>
+        </div>
+        
+    </div>
 
     <script src="script.js"></script>
 </body>
