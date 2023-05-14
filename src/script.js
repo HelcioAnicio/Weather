@@ -1,1 +1,0 @@
-alert('Quero terminar esse projeto')
