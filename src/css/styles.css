@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body, html {
@@ -10,30 +11,53 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 body .container, html .container {
-  border: 1px solid;
   width: 90%;
   max-width: 550px;
   height: 70%;
   max-height: 500px;
   display: flex;
   flex-direction: column;
+  background-color: lightblue;
+  padding: 20px;
+  border-radius: 20px;
 }
 body .container .title, html .container .title {
   padding-block: 3%;
+  text-align: center;
 }
 body .container .inputs, html .container .inputs {
   width: 100%;
   text-align: center;
 }
+body .container .inputs .fieldSearch, html .container .inputs .fieldSearch {
+  width: 40%;
+  min-width: 70px;
+  height: 30px;
+  outline: none;
+  padding-left: 5px;
+  border-radius: 5px;
+  border: none;
+}
+body .container .inputs .fieldSearch:focus, html .container .inputs .fieldSearch:focus {
+  border: 1px solid gray;
+}
+body .container .inputs .buttonSubmit, html .container .inputs .buttonSubmit {
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+}
 body .container .informations, html .container .informations {
-  margin-top: 10%;
+  margin-top: 5%;
   height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border: 1px solid;
 }
 
 /*# sourceMappingURL=styles.css.map */
