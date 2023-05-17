@@ -59,5 +59,19 @@ body .container .informations, html .container .informations {
   flex-direction: column;
   justify-content: space-evenly;
 }
+body .container .informations .dates, html .container .informations .dates {
+  height: 40%;
+}
+body .container .informations .dates div, html .container .informations .dates div {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+}
+body .container .informations .dates div span, html .container .informations .dates div span {
+  padding: 10px 30px 10px 0;
+  border-right: 2px solid;
+}
 
 /*# sourceMappingURL=styles.css.map */
