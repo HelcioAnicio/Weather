@@ -12,27 +12,36 @@ body, html {
   justify-content: center;
   align-items: center;
   color: white;
+  background: rgb(33, 78, 131);
+  background: linear-gradient(169deg, rgb(33, 78, 131) 0%, rgb(101, 161, 176) 48%, rgb(223, 225, 231) 100%);
 }
 body .container, html .container {
-  width: 90%;
+  width: 60%;
   max-width: 550px;
-  height: 70%;
+  height: 40%;
   max-height: 500px;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   background-color: lightblue;
   padding: 20px;
   border-radius: 20px;
+  box-sizing: content-box;
 }
-body .container .title, html .container .title {
-  padding-block: 3%;
+body .container .header, html .container .header {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body .container .header .title, html .container .header .title {
   text-align: center;
 }
-body .container .inputs, html .container .inputs {
+body .container .header .inputs, html .container .header .inputs {
   width: 100%;
   text-align: center;
 }
-body .container .inputs .fieldSearch, html .container .inputs .fieldSearch {
+body .container .header .inputs .fieldSearch, html .container .header .inputs .fieldSearch {
   width: 40%;
   min-width: 70px;
   height: 30px;
@@ -41,10 +50,10 @@ body .container .inputs .fieldSearch, html .container .inputs .fieldSearch {
   border-radius: 5px;
   border: none;
 }
-body .container .inputs .fieldSearch:focus, html .container .inputs .fieldSearch:focus {
+body .container .header .inputs .fieldSearch:focus, html .container .header .inputs .fieldSearch:focus {
   border: 1px solid gray;
 }
-body .container .inputs .buttonSubmit, html .container .inputs .buttonSubmit {
+body .container .header .inputs .buttonSubmit, html .container .header .inputs .buttonSubmit {
   width: 40px;
   height: 30px;
   cursor: pointer;
@@ -53,11 +62,18 @@ body .container .inputs .buttonSubmit, html .container .inputs .buttonSubmit {
   border: none;
 }
 body .container .informations, html .container .informations {
-  margin-top: 5%;
   height: 50%;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-evenly;
+}
+body .container .informations .containerCity, html .container .informations .containerCity {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+body .container .informations .containerCity span, html .container .informations .containerCity span {
+  font-size: 1.3rem;
 }
 body .container .informations .dates, html .container .informations .dates {
   height: 40%;
@@ -67,11 +83,16 @@ body .container .informations .dates div, html .container .informations .dates d
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 25%;
+  width: max-content;
 }
-body .container .informations .dates div span, html .container .informations .dates div span {
+body .container .informations .dates div .deg, html .container .informations .dates div .deg {
   padding: 10px 30px 10px 0;
   border-right: 2px solid;
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+body .container .informations .dates .weather, html .container .informations .dates .weather {
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
