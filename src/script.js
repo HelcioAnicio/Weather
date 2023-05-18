@@ -3,6 +3,7 @@ const apikey = "64e43f422e916e5c20a619c40dd5026b";
 const fieldSearch = document.querySelector('.fieldSearch');
 const buttonSubmit = document.querySelector('.buttonSubmit');
 
+const informations = document.querySelector('.informations')
 const city = document.querySelector('.city');
 const country = document.querySelector('.country');
 const weather = document.querySelector('.weather');
@@ -24,11 +25,14 @@ const getWeather = async (citySearch) => {
 const showWeather = async (citySearch) => {
     const data = await getWeather(citySearch);   
     console.log(data);
+    informations.style.display = 'flex'
+    fieldSearch.value = '';
 
+    
     city.innerHTML = data.name;
-    country.innerHTML = data.sys.country;
+    country.innerHTML = ` -${data.sys.country}`;
     deg.innerHTML = `${parseInt(data.main.temp)}°C`;
-    weather.innerHTML = data.weather[0].description;
+    weather.innerHTML = data.weather[0].description[0].toUpperCase() + data.weather[0].description.substring(1); ;
     imageCondition.setAttribute(
         "src",
         `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
@@ -41,6 +45,12 @@ const showWeather = async (citySearch) => {
 // EVENTOS
 buttonSubmit.addEventListener('click', ()=>{
     const citySearch = fieldSearch.value
+
+    if (!citySearch == ''){
+        showWeather(citySearch)
+    }
+    else {
+        alert('Informe uma cidade corretamente')
+    }
   
-    showWeather(citySearch)
 })
