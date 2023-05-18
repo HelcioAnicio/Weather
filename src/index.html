@@ -17,14 +17,19 @@
 
     <div class="container">
 
-        <h3 class="title">Confira o clima da cidade:</h3>
-        <div class="inputs">
-            <input type="text" class="fieldSearch" placeholder="Digite o nome da cidade">
-            <button type="submit" class="buttonSubmit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class="header">
+            <h3 class="title">Confira o clima da cidade:</h3>
+            <div class="inputs">
+                <input type="text" class="fieldSearch" placeholder="Digite o nome da cidade">
+                <button type="submit" class="buttonSubmit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
         </div>
         
-        <div class="informations">
-            <h1 class="city">Cidade <span class="country">-BR</span></h1>
+        <div class="informations initial">
+            <div class="containerCity">
+                <h1 class="city">Cidade</h1>
+                <span class="country">-BR</span>
+            </div>
             <div class="dates">
                 <div>
                     <span class="deg">15°C </span>
@@ -32,7 +37,6 @@
                 </div>
                 <p class="weather">Nublado</p>
             </div>
-            <p class="conditionsWeather">Previsão de clima nublado, porem poucas chances de chuva.</p>
         </div>
         
     </div>
