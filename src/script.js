@@ -1,5 +1,7 @@
 const apikey = "64e43f422e916e5c20a619c40dd5026b";
 
+const container = document.querySelector('.container');
+
 const fieldSearch = document.querySelector('.fieldSearch');
 const buttonSubmit = document.querySelector('.buttonSubmit');
 
@@ -21,13 +23,11 @@ const getWeather = async (citySearch) => {
     return data;
 }
 
-
 const showWeather = async (citySearch) => {
     const data = await getWeather(citySearch);   
     console.log(data);
     informations.style.display = 'flex'
     fieldSearch.value = '';
-
     
     city.innerHTML = data.name;
     country.innerHTML = ` -${data.sys.country}`;
@@ -39,7 +39,23 @@ const showWeather = async (citySearch) => {
     )
 }
 
-
+function background() {
+    if (weather.value = 'Nublado') {
+        container.style.backgroundImage = "url('/src/assets/Nublado.jpg')";
+    } 
+    else if (weather.value = 'Ceu limpo') {
+        container.style.backgroundImage = "url('/src/assets/Ceu_Limpo.jpg')";
+    } 
+    else if (weather.value = 'Algumas nuvens') {
+        container.style.backgroundImage = "url('/src/assets/Chuva.jpg')";
+    } 
+    else if (weather.value = 'Tempestade') {
+        container.style.backgroundImage = "url('/src/assets/tempestade.jpg')";
+    } 
+    else if (weather.value = 'Neve') {
+        container.style.backgroundImage = "url('/src/assets/Neve.jpg')";
+    } 
+}
 
 
 // EVENTOS
@@ -48,6 +64,7 @@ buttonSubmit.addEventListener('click', ()=>{
 
     if (!citySearch == ''){
         showWeather(citySearch)
+        background()
     }
     else {
         alert('Informe uma cidade corretamente')
