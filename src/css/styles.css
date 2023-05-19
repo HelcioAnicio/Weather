@@ -16,20 +16,25 @@ body, html {
   background: linear-gradient(169deg, rgb(33, 78, 131) 0%, rgb(101, 161, 176) 48%, rgb(223, 225, 231) 100%);
 }
 body .container, html .container {
-  width: 60%;
+  width: 70%;
   max-width: 550px;
-  height: 40%;
+  height: 45%;
   max-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   background-color: lightblue;
   padding: 20px;
   border-radius: 20px;
   box-sizing: content-box;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 body .container .header, html .container .header {
   height: 30%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -42,8 +47,9 @@ body .container .header .inputs, html .container .header .inputs {
   text-align: center;
 }
 body .container .header .inputs .fieldSearch, html .container .header .inputs .fieldSearch {
-  width: 40%;
+  width: 70%;
   min-width: 70px;
+  max-width: 200px;
   height: 30px;
   outline: none;
   padding-left: 5px;
@@ -63,16 +69,18 @@ body .container .header .inputs .buttonSubmit, html .container .header .inputs .
 }
 body .container .informations, html .container .informations {
   height: 50%;
+  width: max-content;
   display: none;
   flex-direction: column;
   justify-content: space-evenly;
 }
 body .container .informations .containerCity, html .container .informations .containerCity {
   display: flex;
-  align-items: center;
-  width: 50%;
+  align-items: baseline;
+  width: 100%;
 }
 body .container .informations .containerCity span, html .container .informations .containerCity span {
+  margin-top: 5px;
   font-size: 1.3rem;
 }
 body .container .informations .dates, html .container .informations .dates {

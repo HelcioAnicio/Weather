@@ -15,20 +15,29 @@ body, html
     background: linear-gradient(169deg, rgba(33,78,131,1) 0%, rgba(101,161,176,1) 48%, rgba(223,225,231,1) 100%)
 
     .container
-        width: 60%
+        width: 70%
         max-width: 550px
-        height: 40%
+        height: 45%
         max-height: 500px
         display: flex
         flex-direction: column
         justify-content: space-evenly
+        align-items: center
         background-color: lightblue
         padding: 20px
         border-radius: 20px
         box-sizing: content-box
+        // background-image: url(../assets/Ceu_Limpo.jpg)
+        background-position: center center
+        background-size: cover
+        background-repeat: no-repeat
+        // filter: blur(2px)
+        // filter: opacity(40%)
+        // filter: brightness(54%)
         
         .header
             height: 30%
+            width: 90%
             display: flex
             flex-direction: column
             justify-content: space-evenly
@@ -41,8 +50,9 @@ body, html
                 text-align: center
 
                 .fieldSearch
-                    width: 40%
+                    width: 70%
                     min-width: 70px
+                    max-width: 200px
                     height: 30px
                     outline: none
                     padding-left: 5px
@@ -62,16 +72,18 @@ body, html
 
         .informations
             height: 50%
+            width: max-content
             display: none
             flex-direction: column
             justify-content: space-evenly
 
             .containerCity 
                 display: flex
-                align-items: center
-                width: 50%
+                align-items: baseline
+                width: 100%
 
                 span
+                    margin-top: 5px
                     font-size: 1.3rem
 
             .dates
