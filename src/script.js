@@ -8,12 +8,11 @@ const buttonSubmit = document.querySelector('.buttonSubmit');
 const informations = document.querySelector('.informations')
 const city = document.querySelector('.city');
 const country = document.querySelector('.country');
+
 const weather = document.querySelector('.weather');
+
 const deg = document.querySelector('.deg');
 const imageCondition = document.querySelector('.imageCondition');
-
-
-
 
 // FUNÇÔES
 const getWeather = async (citySearch) => {
@@ -37,23 +36,26 @@ const showWeather = async (citySearch) => {
         "src",
         `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
     )
+    background()
 }
 
 function background() {
-    if (weather.value = 'Nublado') {
+    const weatherValue = weather.textContent;
+    // console.log(weatherValue)
+    if (weatherValue === 'Nublado') {
         container.style.backgroundImage = "url('/src/assets/Nublado.jpg')";
-    } 
-    else if (weather.value = 'Ceu limpo') {
+        
+    } else if (weatherValue === 'Céu limpo') {
         container.style.backgroundImage = "url('/src/assets/Ceu_Limpo.jpg')";
-    } 
-    else if (weather.value = 'Algumas nuvens') {
-        container.style.backgroundImage = "url('/src/assets/Chuva.jpg')";
-    } 
-    else if (weather.value = 'Tempestade') {
+    
+    } else if (weatherValue === 'Algumas nuvens' || weatherValue === 'Nuvens dispersas') {
+        container.style.backgroundImage = "url('/src/assets/Algumas_nuvens.jpg')";
+        
+    } else if (weatherValue === 'Tempestade') {
         container.style.backgroundImage = "url('/src/assets/tempestade.jpg')";
-    } 
-    else if (weather.value = 'Neve') {
-        container.style.backgroundImage = "url('/src/assets/Neve.jpg')";
+        
+    } else if (weatherValue === 'Neve') {
+        container.style.backgroundImage = "url('/src/assets/Neve.jpg')";  
     } 
 }
 
@@ -62,12 +64,8 @@ function background() {
 buttonSubmit.addEventListener('click', ()=>{
     const citySearch = fieldSearch.value
 
-    if (!citySearch == ''){
+    if (citySearch !== ''){
         showWeather(citySearch)
-        background()    
-    }
-    else {
-        alert('Informe uma cidade corretamente')
-    }
-  
+
+    } else { alert('Informe uma cidade corretamente') }
 })
