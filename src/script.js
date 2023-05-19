@@ -64,7 +64,7 @@ buttonSubmit.addEventListener('click', ()=>{
 
     if (!citySearch == ''){
         showWeather(citySearch)
-        background()
+        background()    
     }
     else {
         alert('Informe uma cidade corretamente')
