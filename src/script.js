@@ -36,7 +36,7 @@ const showWeather = async (citySearch) => {
     data.weather[0].description.substring(1);
   imageCondition.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+    `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
   );
   background();
 };
